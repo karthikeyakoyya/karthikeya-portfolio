@@ -3,7 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karthikeya Koyya | Portfolio</title>
+<title>Karthikeya Koyya | Software, QA Automation &amp; AI/ML Engineer</title>
+<meta name="description" content="Karthikeya Koyya, NIT Durgapur CSE graduate. Test automation, backend, data and ML projects with tests, live demos and honest write-ups. Open to roles across India.">
+<meta property="og:title" content="Karthikeya Koyya | Portfolio">
+<meta property="og:description" content="Test automation, backend, data and ML projects, with live demos and source.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://karthikeya-portfolio-cyan.vercel.app/">
+<meta property="og:url" content="https://karthikeya-portfolio-cyan.vercel.app/">
+<meta property="og:image" content="https://karthikeya-portfolio-cyan.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%AD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -20,7 +32,7 @@
     --sky:#38BDF8;
     --text:#EAF0FA;
     --text-mute:#90A0BE;
-    --text-faint:#5A6A8A;
+    --text-faint:#8494B6;
     --f-display:'Fraunces',serif;
     --f-accent:'Space Grotesk',sans-serif;
     --f-body:'Inter',sans-serif;
@@ -46,7 +58,7 @@
   @keyframes float3{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(24px,26px) scale(1.06);}}
 
   /* ---------- Nav ---------- */
-  nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(21,15,46,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+  nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(11,18,32,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;}
   .brand{font-family:var(--f-accent);font-weight:700;font-size:16px;display:flex;align-items:center;gap:9px;}
   .brand-mark{width:26px;height:26px;border-radius:50%;background:conic-gradient(from 200deg,var(--coral),var(--amber),var(--mint),var(--sky),var(--coral));animation:spin 12s linear infinite;}
@@ -71,7 +83,7 @@
   }
 
   /* ---------- Hero ---------- */
-  #hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 60px;position:relative;}
+  #hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 60px;position:relative;overflow:hidden;}
   .blob-a{width:520px;height:520px;background:var(--coral);top:-120px;right:-140px;animation:float1 11s ease-in-out infinite;}
   .blob-b{width:420px;height:420px;background:var(--sky);bottom:-100px;left:-120px;animation:float2 13s ease-in-out infinite;}
   .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;width:100%;}
@@ -162,6 +174,52 @@
   .wcard.revealed{opacity:1;transform:translateY(0);}
   .wcard:hover{transform:translateY(-6px);box-shadow:0 24px 50px -20px rgba(0,0,0,.5);}
   .wcard.feature{grid-column:1/-1;}
+  .wmore{grid-column:1/-1;display:flex;align-items:center;gap:16px;margin:54px 0 18px;font-family:var(--f-accent);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-faint);}
+  .wmore::after{content:"";flex:1;height:1px;background:var(--line);}
+  [hidden]{display:none!important;}
+  .work-sub{color:var(--text-mute);max-width:640px;margin:-26px 0 26px;font-size:15.5px;line-height:1.7;}
+  .work-sub a{color:var(--amber);}
+  .filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px;}
+  .fchip{font-family:var(--f-accent);font-weight:600;font-size:13px;padding:9px 16px;border-radius:100px;border:1.5px solid var(--line);background:none;color:var(--text-mute);cursor:pointer;transition:border-color .2s,color .2s,background .2s;}
+  .fchip:hover{border-color:var(--text-faint);color:var(--text);}
+  .fchip[aria-pressed="true"]{border-color:var(--amber);color:var(--amber);background:rgba(240,180,41,.1);}
+  .fchip:focus-visible{outline:2px solid var(--sky);outline-offset:2px;}
+  .mlist{display:flex;flex-direction:column;gap:12px;}
+  .mrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.3fr) auto;gap:8px 30px;align-items:start;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 24px;transition:border-color .2s;}
+  .mrow:hover{border-color:var(--text-faint);}
+  .mname{font-family:var(--f-display);font-weight:700;font-size:17px;line-height:1.3;}
+  .mname small{display:block;font-family:var(--f-accent);font-weight:500;font-size:12px;color:var(--text-faint);margin-top:4px;}
+  .mdesc{color:var(--text-mute);font-size:14px;line-height:1.7;}
+  .mlinks a{font-family:var(--f-accent);font-weight:600;font-size:13px;color:var(--sky);text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px;white-space:nowrap;}
+  .mlinks a:hover{border-color:currentColor;}
+  .work-end{margin-top:34px;text-align:center;}
+  .skip{position:absolute;left:-999px;top:8px;background:var(--amber);color:#0b1220;padding:10px 16px;border-radius:8px;font-weight:600;z-index:200;}
+  .skip:focus{left:12px;}
+  .wshot{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);margin:0 0 18px;background:var(--panel-hi);}
+  .wcard.feature .wshot{max-width:680px;}
+  .mshot{grid-column:1/-1;display:block;width:100%;max-width:620px;height:auto;border-radius:12px;border:1px solid var(--line);margin-top:10px;}
+  .mlist.collapsed .mextra{display:none;}
+  .mtoggle{display:block;margin:22px auto 0;}
+  .mtoggle[hidden]{display:none!important;}
+  .cta-main{display:flex;gap:14px;flex-wrap:wrap;margin:6px 0 26px;}
+  @media (max-width:640px){
+    section{padding:64px 0;}
+    .wbody{padding:22px;}
+    .wdesc{font-size:14.5px;line-height:1.7;}
+    .pcard{padding:22px;}
+    .sk-row{flex-direction:column;align-items:flex-start;gap:10px;}
+    .wmore{margin:36px 0 14px;}
+  }
+
+  .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  .pcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px 28px;transition:border-color .2s;}
+  .pcard:hover{border-color:var(--text-faint);}
+  .pcard h3{font-family:var(--f-display);font-weight:700;font-size:19px;margin-bottom:10px;}
+  .pcard p{color:var(--text-mute);font-size:14.5px;line-height:1.75;}
+  @media (max-width:860px){.pgrid{grid-template-columns:1fr;}}
+
+  @media (max-width:860px){.mrow{grid-template-columns:1fr;gap:6px;}}
+
   .whead{height:8px;}
   .wbody{padding:28px;}
   .wtop{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:12px;}
@@ -279,6 +337,7 @@
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div id="progress"></div>
 
 <nav>
@@ -295,30 +354,31 @@
   </div>
 </nav>
 
+<main id="main">
 <section id="hero">
   <div class="blob blob-a"></div>
   <div class="blob blob-b"></div>
   <div class="wrap hero-grid">
     <div>
       <div class="kicker">Open to new roles · India-wide</div>
-      <h1><span class="h-line"><span style="animation-delay:.05s">Building things</span></span><span class="h-line"><span style="animation-delay:.18s">that <em>sense</em>,</span></span><span class="h-line"><span style="animation-delay:.31s">learn &amp; respond.</span></span></h1>
+      <h1><span class="h-line"><span style="animation-delay:.05s">Building things</span></span><span class="h-line"><span style="animation-delay:.18s">that <em>work</em>,</span></span><span class="h-line"><span style="animation-delay:.31s">and showing proof.</span></span></h1>
       <div class="hero-tags">
         <span class="tag">Software Engineer</span>
-        <span class="tag">Data Engineer</span>
-        <span class="tag">AI/ML Engineer</span>
-        <span class="tag">Embedded &amp; IoT</span>
         <span class="tag">QA / Test Automation</span>
+        <span class="tag">Data Engineer &amp; Analyst</span>
+        <span class="tag">AI / ML Engineer</span>
       </div>
-      <p class="hero-desc">I'm a recent Computer Science graduate from NIT Durgapur who likes projects that close the loop: sensors that feed models, models that feed dashboards, and dashboards people actually check. Based in Visakhapatnam, happy to relocate anywhere in India.</p>
+      <p class="hero-desc">I'm a computer science graduate from NIT Durgapur. I like projects where something real happens: a sensor streams data, a model learns from it, a dashboard shows what changed. Each one comes with tests and a plain note on what I did and didn't run. I'm based in Visakhapatnam and happy to relocate anywhere in India.</p>
       <div class="hero-cta">
         <a class="btn btn-fill" href="#work">See my work</a>
+        <a class="btn btn-line" href="resume.pdf" id="resumeBtn" download="Karthikeya_Koyya_Resume.pdf" hidden>Resume ↓</a>
         <a class="btn btn-line" href="https://github.com/karthikeyakoyya" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
     <div class="orb-wrap">
       <div class="orb-ring"></div>
       <div class="orb-ring r2"></div>
-      <div class="orb-core"><div class="orb-label"><b>16</b><span>PROJECTS SHIPPED</span></div></div>
+      <div class="orb-core"><div class="orb-label"><b>6</b><span>FEATURED PROJECTS</span></div></div>
       <div class="orbit orbit-1"><div class="orbit-node sense" title="Sense: sensors &amp; data intake">📡</div></div>
       <div class="orbit orbit-2"><div class="orbit-node learn" title="Learn: models &amp; pipelines">🧠</div></div>
       <div class="orbit orbit-3"><div class="orbit-node respond" title="Respond: dashboards &amp; APIs">📊</div></div>
@@ -333,9 +393,9 @@
 
 <section id="stats">
   <div class="wrap stats-row">
-    <div class="stat"><b data-count="589770">0</b><span>Samples collected</span></div>
-    <div class="stat"><b data-count="93.16" data-decimals="2" data-suffix="%">0</b><span>Peak model accuracy</span></div>
-    <div class="stat"><b data-count="16">0</b><span>Projects shipped</span></div>
+    <div class="stat"><b data-count="589770">0</b><span>Samples we collected</span></div>
+    <div class="stat"><b data-count="93.16" data-decimals="2" data-suffix="%">0</b><span>Activity-recognition accuracy</span></div>
+    <div class="stat"><b data-count="30" data-suffix="+">0</b><span>Repos on GitHub</span></div>
     <div class="stat"><b data-count="4" data-suffix="+">0</b><span>Years building</span></div>
   </div>
 </section>
@@ -344,16 +404,15 @@
   <div class="wrap bio-grid">
     <div>
       <div class="eyebrow">About</div>
-      <p>I graduated from <b>NIT Durgapur</b> in May 2026 with a B.Tech in Computer Science, but most of what I actually know I learned by building: wiring an ESP32 to a motion sensor at 2am, debugging a geofence that was off by 40 meters, and arguing with a TF-IDF classifier about what counts as "urgent."</p>
-      <p>My final-year project, a <b>human activity recognition system</b> built on custom hardware, is still the thing I'm proudest of. Not because it's flashy, but because every number in it (93.16% accuracy, 589,770 samples) came from data I collected myself with two teammates and a lot of patience.</p>
-      <p>Since graduating I've kept shipping: an AutoML crop-advisory system, a data governance catalog, an AI-augmented event-ops tool, and, as I've leaned harder into QA and automation-engineer roles, a Selenium/TestNG/RestAssured suite, a Kafka-based API health monitor, and a governed LangGraph agent that reviews pull requests. All while actively interviewing for full-time roles.</p>
-      <p>Looking for a team where I can keep doing that: test automation and quality engineering, full-stack work, applied ML, and the occasional excuse to solder something.</p>
+      <p>I graduated from <b>NIT Durgapur</b> in May 2026 with a B.Tech in Computer Science. Most of what I know I learned by building things and watching them break: wiring an ESP32 to a motion sensor at 2am, tracking down a geofence that was off by 40 meters, and arguing with a classifier about what counts as "urgent."</p>
+      <p>My final-year project is the one I'm proudest of. Two teammates and I built a wearable activity recognizer on our own hardware, and every number in it came from data we collected ourselves. Since then I've kept building across test automation, backend services, data pipelines and applied ML. I even wrote a small COBOL batch system, because I wanted to see how that world works first-hand.</p>
+      <p>Every README I write says what I tested and what I didn't. I'd rather you hear it from me than find it later.</p>
     </div>
     <div class="fact-list">
       <div class="fact"><span class="ico">🎓</span><div><b>NIT Durgapur, B.Tech CSE</b><span>Graduated May 2026</span></div></div>
       <div class="fact"><span class="ico">📍</span><div><b>Visakhapatnam, India</b><span>Open to relocating anywhere in India</span></div></div>
-      <div class="fact"><span class="ico">🎯</span><div><b>Targeting QA Automation / SDE / Data</b><span>Bangalore, Pune &amp; Hyderabad top of mind</span></div></div>
-      <div class="fact"><span class="ico">🛠️</span><div><b>Full-stack + embedded + ML</b><span>From React frontends to ESP32 firmware to MLOps</span></div></div>
+      <div class="fact"><span class="ico">🎯</span><div><b>Looking for</b><span>QA automation, SDE, data, analyst and AI/ML roles. Bengaluru, Pune and Hyderabad first.</span></div></div>
+      <div class="fact"><span class="ico">🎙️</span><div><b>Editor-in-Chief, Radio NITRoz</b><span>Led a team of 20+ people</span></div></div>
     </div>
   </div>
 </section>
@@ -361,234 +420,217 @@
 <section id="work">
   <div class="wrap">
     <div class="eyebrow">Selected Work</div>
-    <h2 class="stitle">Projects I've built</h2>
+    <h2 class="stitle">Things I've built</h2>
+    <p class="work-sub">Six to start with, then a shorter list. Every project has its own README that says what I tested and what I didn't. The rest is on <a href="https://github.com/karthikeyakoyya" target="_blank" rel="noopener">GitHub</a>.</p>
+    <div class="filters" role="group" aria-label="Filter projects by area">
+      <button class="fchip" data-filter="all" aria-pressed="true">All</button>
+      <button class="fchip" data-filter="backend" aria-pressed="false">Backend</button>
+      <button class="fchip" data-filter="qa" aria-pressed="false">QA &amp; testing</button>
+      <button class="fchip" data-filter="data" aria-pressed="false">Data</button>
+      <button class="fchip" data-filter="analyst" aria-pressed="false">Analytics &amp; ops</button>
+      <button class="fchip" data-filter="ml" aria-pressed="false">AI &amp; ML</button>
+      <button class="fchip" data-filter="systems" aria-pressed="false">Systems &amp; embedded</button>
+    </div>
     <div class="wgrid">
 
-      <div class="wcard feature">
-        <div class="whead" style="background:linear-gradient(90deg,var(--coral),var(--amber));"></div>
+      <div class="wcard feature" data-tags="ml systems">
+        <div class="whead" style="background:var(--coral);"></div>
         <div class="wbody">
           <div class="wtop">
-            <div style="display:flex;gap:16px;align-items:center;">
-              <div class="wicon" style="background:rgba(224,149,74,.15);">🧠</div>
-              <div class="wname">Human Activity Recognition</div>
-            </div>
+            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(224,149,74,.15);">🧠</div><div class="wname">Human Activity Recognition</div></div>
             <span class="wpill" style="background:rgba(224,149,74,.15);color:var(--coral);">Final-year project</span>
           </div>
-          <p class="wdesc">An on-body activity classifier running on hardware I built from scratch: an ESP32-S3 + MPU6050 streams motion data at 50Hz over BLE, feeding a Decision Tree trained on a dataset my team collected ourselves across 6 activity classes. ~80 statistical, temporal, energy and vertical features engineered by hand. Built with Ravada Laxman Giridhar and Abhishek Gupta, advised by Dr. Sujoy Saha.</p>
-          <div class="wstack">
-            <span class="schip">ESP32-S3</span><span class="schip">MPU6050</span><span class="schip">MicroPython</span><span class="schip">BLE GATT</span><span class="schip">Decision Tree</span>
-          </div>
-          <div class="wmetrics">
-            <div class="m"><b>93.16%</b><span>ACCURACY</span></div>
-            <div class="m"><b>589,770</b><span>SAMPLES</span></div>
-            <div class="m"><b>6</b><span>ACTIVITY CLASSES</span></div>
-          </div>
+          <p class="wdesc">My final-year project, built with Ravada Laxman Giridhar and Abhishek Gupta under Dr. Sujoy Saha. We made the hardware ourselves: an ESP32-S3 and a motion sensor streaming at 50 Hz over Bluetooth. Then we collected our own dataset and hand-built about 80 features for a decision tree that tells six activities apart.</p>
+          <div class="wstack"><span class="schip">ESP32-S3</span><span class="schip">MPU6050</span><span class="schip">MicroPython</span><span class="schip">BLE GATT</span><span class="schip">Decision Tree</span></div>
+          <div class="wmetrics"><div class="m"><b>93.16%</b><span>ACCURACY</span></div><div class="m"><b>589,770</b><span>SAMPLES WE COLLECTED</span></div><div class="m"><b>6</b><span>ACTIVITIES</span></div></div>
+          <div class="wlinks" style="color:var(--coral);"></div>
         </div>
       </div>
-
-      <div class="wcard feature">
-        <div class="whead" style="background:linear-gradient(90deg,var(--mint),var(--sky));"></div>
+      <div class="wcard" data-tags="ml data">
+        <div class="whead" style="background:var(--mint);"></div>
         <div class="wbody">
           <div class="wtop">
-            <div style="display:flex;gap:16px;align-items:center;">
-              <div class="wicon" style="background:rgba(52,211,153,.15);">🌾</div>
-              <div class="wname">Crop Yield &amp; Irrigation Advisory</div>
-            </div>
+            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(52,211,153,.15);">🌾</div><div class="wname">Crop Yield &amp; Irrigation Advisory</div></div>
             <span class="wpill" style="background:rgba(52,211,153,.15);color:var(--mint);">Live demo</span>
           </div>
-          <p class="wdesc">An end-to-end AutoML system for crop yield prediction and irrigation guidance. PyCaret sweeps candidate models to find the strongest baseline, a tuned XGBoost regressor ships to production, and every run is tracked in MLflow. Served through a FastAPI backend on PostgreSQL with a styled frontend, deployed live on Render.</p>
-          <div class="wstack"><span class="schip">PostgreSQL</span><span class="schip">PyCaret AutoML</span><span class="schip">XGBoost</span><span class="schip">MLflow</span><span class="schip">FastAPI</span></div>
+          <p class="wdesc">An end-to-end crop advisor. PyCaret compares candidate models to find a baseline, a tuned XGBoost regressor goes to production, and every run is tracked in MLflow. A FastAPI backend on PostgreSQL serves it all, live on Render.</p>
+          <div class="wstack"><span class="schip">PyCaret</span><span class="schip">XGBoost</span><span class="schip">MLflow</span><span class="schip">FastAPI</span><span class="schip">PostgreSQL</span></div>
+          
           <div class="wlinks" style="color:var(--mint);"><a href="https://crop-advisory-353j.onrender.com" target="_blank" rel="noopener">Live demo ↗</a></div>
         </div>
       </div>
-
-      <div class="wcard">
-        <div class="whead" style="background:var(--amber);"></div>
-        <div class="wbody">
-          <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(240,180,41,.15);">🤖</div><div class="wname">TestOps AI</div></div>
-            <span class="wpill" style="background:rgba(240,180,41,.15);color:var(--amber);">Phases 1 to 5 complete</span>
-          </div>
-          <p class="wdesc">A full-stack test orchestration platform: a Django REST + PostgreSQL backend with an AI ticket classifier and a natural-language query orchestrator, JWT auth, and a Next.js/TypeScript/Redux dashboard built on a custom design system. 23 backend and 19 frontend tests, CI pipeline green on GitHub Actions.</p>
-          <div class="wstack"><span class="schip">Django REST</span><span class="schip">PostgreSQL</span><span class="schip">Next.js / TS</span><span class="schip">Redux</span><span class="schip">JWT Auth</span></div>
-          <div class="wlinks" style="color:var(--amber);"><a href="https://github.com/karthikeyakoyya/testops-ai" target="_blank" rel="noopener">Source ↗</a></div>
-        </div>
-      </div>
-
-      <div class="wcard">
+      <div class="wcard" data-tags="qa">
         <div class="whead" style="background:var(--sky);"></div>
         <div class="wbody">
           <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(56,189,248,.15);">🗂️</div><div class="wname">Data Catalog &amp; Governance</div></div>
-            <span class="wpill" style="background:rgba(56,189,248,.15);color:var(--sky);">Built</span>
-          </div>
-          <p class="wdesc">A data catalog and governance dashboard built on the Olist e-commerce dataset: a table- and column-level metadata catalog, PII/sensitivity classification, and a 10-check data quality framework covering completeness, uniqueness, consistency, validity and freshness, backed by a governance charter.</p>
-          <div class="wstack"><span class="schip">SQL</span><span class="schip">Python</span><span class="schip">Power BI</span></div>
-          <div class="wlinks" style="color:var(--sky);"><a href="https://github.com/karthikeyakoyya/mini-data-catalog-project" target="_blank" rel="noopener">Source ↗</a></div>
-        </div>
-      </div>
-
-      <div class="wcard">
-        <div class="whead" style="background:var(--coral);"></div>
-        <div class="wbody">
-          <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(224,149,74,.15);">🎪</div><div class="wname">Event Ops Command Center</div></div>
-            <span class="wpill" style="background:rgba(224,149,74,.15);color:var(--coral);">Built</span>
-          </div>
-          <p class="wdesc">An AI-augmented event and vendor operations tool: Airtable as the data backbone, the Claude API driving automated vendor risk flagging and outreach sequencing, and a React dashboard for post-event reporting.</p>
-          <div class="wstack"><span class="schip">Airtable</span><span class="schip">Claude API</span><span class="schip">React</span></div>
-          <div class="wlinks" style="color:var(--coral);"><a href="https://github.com/karthikeyakoyya/event-ops-command-center" target="_blank" rel="noopener">Source ↗</a></div>
-        </div>
-      </div>
-
-      <div class="wcard">
-        <div class="whead" style="background:var(--mint);"></div>
-        <div class="wbody">
-          <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(52,211,153,.15);">📡</div><div class="wname">Smart Attendance Tracker</div></div>
-            <span class="wpill" style="background:rgba(52,211,153,.15);color:var(--mint);">Deployed</span>
-          </div>
-          <p class="wdesc">A geofenced attendance system with server-side location verification (not just client-side), JWT role-based auth for students vs. admins, and two ML layers on the admin dashboard: an Isolation Forest that flags suspicious check-ins, and a logistic regression that scores each student's risk of their next check-in being an absence. Backed by 26 automated tests.</p>
-          <div class="wstack"><span class="schip">FastAPI</span><span class="schip">JWT Auth</span><span class="schip">Isolation Forest</span><span class="schip">Logistic Regression</span><span class="schip">Postgres/SQLite</span><span class="schip">Docker · AWS</span></div>
-          <div class="wlinks" style="color:var(--mint);"><a href="https://github.com/karthikeyakoyya/attendance-tracker" target="_blank" rel="noopener">Source ↗</a></div>
-        </div>
-      </div>
-
-      <div class="wcard">
-        <div class="whead" style="background:var(--sky);"></div>
-        <div class="wbody">
-          <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(56,189,248,.15);">🏫</div><div class="wname">Campus Resource Finder</div></div>
-            <span class="wpill" style="background:rgba(56,189,248,.15);color:var(--sky);">Live</span>
-          </div>
-          <p class="wdesc">A live dashboard showing real-time status of campus resources at NIT Durgapur, including canteen queues, library floor occupancy, printers, and admin rooms, with a React Native/Expo companion app for on-the-go checks.</p>
-          <div class="wstack"><span class="schip">React</span><span class="schip">Firebase Realtime DB</span><span class="schip">React Native / Expo</span></div>
-          <div class="wlinks" style="color:var(--sky);"><a href="https://campus-resource-finder-six.vercel.app/" target="_blank" rel="noopener">Live app ↗</a><a href="https://github.com/karthikeyakoyya/campus-resource-finder" target="_blank" rel="noopener">Source ↗</a></div>
-        </div>
-      </div>
-
-      <div class="wcard">
-        <div class="whead" style="background:var(--amber);"></div>
-        <div class="wbody">
-          <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(240,180,41,.15);">🎟️</div><div class="wname">OpsDesk: Complaint &amp; Quality Ops</div></div>
-            <span class="wpill" style="background:rgba(240,180,41,.15);color:var(--amber);">Built</span>
-          </div>
-          <p class="wdesc">A support ticketing system with an SLA rule engine and a TF-IDF + ComplementNB classifier that auto-routes tickets by category and urgency.</p>
-          <div class="wstack"><span class="schip">FastAPI</span><span class="schip">SQLAlchemy</span><span class="schip">React</span><span class="schip">Tailwind CSS</span></div>
-        </div>
-      </div>
-
-      <div class="wcard">
-        <div class="whead" style="background:var(--mint);"></div>
-        <div class="wbody">
-          <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(52,211,153,.15);">🏦</div><div class="wname">KYC/AML Anomaly Detection Pipeline</div></div>
-            <span class="wpill" style="background:rgba(52,211,153,.15);color:var(--mint);">Built</span>
-          </div>
-          <p class="wdesc">An end-to-end KYC/AML case-generation pipeline: synthetic client and transaction data feeding rule-based and Isolation Forest anomaly detection plus narrative-memo screening, risk scoring into a SQLite database, an auto-generated Suspicious Activity Report in Word for the top flagged cases, an Excel/Power BI-ready dashboard, and a separate 4-dimension data-quality audit (completeness, validity, consistency, freshness) on the onboarding data.</p>
-          <div class="wstack"><span class="schip">Python</span><span class="schip">scikit-learn</span><span class="schip">SQLite</span><span class="schip">Node.js (docx)</span><span class="schip">Excel / Power BI</span></div>
-          <div class="wlinks" style="color:var(--mint);"><a href="https://github.com/karthikeyakoyya/kyc-aml-risk-detection" target="_blank" rel="noopener">Source ↗</a></div>
-        </div>
-      </div>
-
-      <div class="wcard">
-        <div class="whead" style="background:var(--sky);"></div>
-        <div class="wbody">
-          <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(56,189,248,.15);">🔬</div><div class="wname">Cervical Cytology Classifier</div></div>
-            <span class="wpill" style="background:rgba(56,189,248,.15);color:var(--sky);">Built</span>
-          </div>
-          <p class="wdesc">A lightweight MobileNetV2 classifier trained on the SIPaKMeD dataset (966 images across 5 cell classes), exported to TorchScript for fast, small-footprint inference at the edge.</p>
-          <div class="wstack"><span class="schip">PyTorch</span><span class="schip">MobileNetV2</span><span class="schip">TorchScript</span></div>
-          <div class="wmetrics"><div class="m"><b>89%</b><span>TEST ACC.</span></div><div class="m"><b>85.6%</b><span>VAL ACC.</span></div></div>
-          <div class="wlinks" style="color:var(--sky);"><a href="https://github.com/karthikeyakoyya/cervical-cell-classifier" target="_blank" rel="noopener">Source ↗</a></div>
-        </div>
-      </div>
-
-      <div class="wcard">
-        <div class="whead" style="background:var(--amber);"></div>
-        <div class="wbody">
-          <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(240,180,41,.15);">📦</div><div class="wname">Warehouse Inventory Auditor</div></div>
-            <span class="wpill" style="background:rgba(240,180,41,.15);color:var(--amber);">Built</span>
-          </div>
-          <p class="wdesc">A computer-vision auditor that scans warehouse video feeds with YOLOv8 + ByteTrack to track items and flag stock discrepancies, backed by a Flask API, MongoDB, and a React/Vite frontend.</p>
-          <div class="wstack"><span class="schip">YOLOv8</span><span class="schip">ByteTrack</span><span class="schip">Flask</span><span class="schip">MongoDB</span></div>
-          <div class="wlinks" style="color:var(--amber);"><a href="https://github.com/karthikeyakoyya/ai-warehouse-auditor" target="_blank" rel="noopener">Source ↗</a></div>
-        </div>
-      </div>
-
-      <div class="wcard feature">
-        <div class="whead" style="background:linear-gradient(90deg,var(--sky),var(--mint));"></div>
-        <div class="wbody">
-          <div class="wtop">
-            <div style="display:flex;gap:16px;align-items:center;">
-              <div class="wicon" style="background:rgba(56,189,248,.15);">🧪</div>
-              <div class="wname">Exam Portal QA Automation Suite</div>
-            </div>
+            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(56,189,248,.15);">🧪</div><div class="wname">Exam Portal QA Automation Suite</div></div>
             <span class="wpill" style="background:rgba(56,189,248,.15);color:var(--sky);">Live mock app</span>
           </div>
-          <p class="wdesc">A full-stack SDET portfolio piece built against a self-contained mock exam-results portal (to keep it 100% reproducible, no CAPTCHAs or ToS risk): Selenium + TestNG UI automation, embedded chart/slicer "dashboard" automation that waits for async re-render and validates against the underlying data (the same pattern real Power BI/Tableau embed testing needs), RestAssured API tests against a live public API, and JDBC data-integrity checks that run against either MySQL or Oracle from the same test code. One accessibility test is left intentionally failing to prove the suite actually catches a real defect, not just passes trivially.</p>
-          <div class="wstack">
-            <span class="schip">Selenium</span><span class="schip">TestNG</span><span class="schip">RestAssured</span><span class="schip">JDBC</span><span class="schip">ExtentReports</span>
-          </div>
+          <img class="wshot" src="img/exam-qa.jpg" alt="The mock State Board exam results portal that the test suite runs against, showing the search form and a results table." width="1000" height="625" loading="lazy">
+          <p class="wdesc">A test suite for a mock exam-results portal I built myself, so anyone can rerun it without CAPTCHAs or terms-of-service worries. Selenium and TestNG cover the UI, chart checks wait for async re-renders and compare against the underlying data, RestAssured hits a live API, and JDBC checks data integrity on MySQL or Oracle. One accessibility test fails on purpose, to prove the suite catches real defects.</p>
+          <div class="wstack"><span class="schip">Selenium</span><span class="schip">TestNG</span><span class="schip">RestAssured</span><span class="schip">JDBC</span><span class="schip">ExtentReports</span></div>
+          
           <div class="wlinks" style="color:var(--sky);"><a href="https://karthikeyakoyya.github.io/exam-portal-qa-suite/mock-app/index.html" target="_blank" rel="noopener">Mock app ↗</a><a href="https://github.com/karthikeyakoyya/exam-portal-qa-suite" target="_blank" rel="noopener">Source ↗</a></div>
         </div>
       </div>
-
-      <div class="wcard">
-        <div class="whead" style="background:var(--coral);"></div>
-        <div class="wbody">
-          <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(224,149,74,.15);">🎫</div><div class="wname">ServiceDesk Pro</div></div>
-            <span class="wpill" style="background:rgba(224,149,74,.15);color:var(--coral);">Built</span>
-          </div>
-          <p class="wdesc">An ITSM-style helpdesk console built to match what a Service Desk Analyst job actually asks for: CTI ticket logging (Category/Type/Item), an SLA rule engine with priority-based due-by timestamps and live breach flags, a TF-IDF + Naive Bayes auto-triage classifier, full incident lifecycle with audit trail, customer-vs-internal notes, a self-help knowledge base, and a reporting dashboard. All 9 backend tests pass.</p>
-          <div class="wstack"><span class="schip">FastAPI</span><span class="schip">React 19</span><span class="schip">SQLAlchemy</span><span class="schip">JWT Auth</span><span class="schip">scikit-learn</span></div>
-          <div class="wlinks" style="color:var(--coral);"><a href="https://github.com/karthikeyakoyya/servicedesk-pro" target="_blank" rel="noopener">Source ↗</a></div>
-        </div>
-      </div>
-
-      <div class="wcard">
+      <div class="wcard" data-tags="backend">
         <div class="whead" style="background:var(--amber);"></div>
         <div class="wbody">
           <div class="wtop">
             <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(240,180,41,.15);">⚡</div><div class="wname">Real-Time API Health Monitor</div></div>
-            <span class="wpill" style="background:rgba(240,180,41,.15);color:var(--amber);">Live demo</span>
+            <span class="wpill" style="background:rgba(240,180,41,.15);color:var(--amber);">Full stack</span>
           </div>
-          <p class="wdesc">An observability platform that pings 5 live public APIs every 10 seconds from a Java Spring Boot service, streams the results through Apache Kafka, and runs them through a Python anomaly detector (downtime, slow-response and high-latency rules with CRITICAL/HIGH/MEDIUM severities) before a FastAPI backend on PostgreSQL serves a React dashboard that refreshes every 5 seconds with live status and response-time charts.</p>
-          <div class="wstack"><span class="schip">Java / Spring Boot</span><span class="schip">Apache Kafka</span><span class="schip">FastAPI</span><span class="schip">PostgreSQL</span><span class="schip">React</span></div>
-          <div class="wlinks" style="color:var(--amber);"><a href="https://api-health-monitor-dashboard.onrender.com" target="_blank" rel="noopener">Live demo ↗</a><a href="https://github.com/karthikeyakoyya/api-health-monitor" target="_blank" rel="noopener">Source ↗</a></div>
+          <p class="wdesc">A Spring Boot service pings five public APIs every ten seconds and streams the results through Kafka. A Python detector flags downtime and slow responses with CRITICAL, HIGH or MEDIUM severity, and a FastAPI backend on PostgreSQL feeds a React dashboard that refreshes every five seconds. The whole stack starts with one docker-compose command.</p>
+          <div class="wstack"><span class="schip">Java / Spring Boot</span><span class="schip">Kafka</span><span class="schip">FastAPI</span><span class="schip">PostgreSQL</span><span class="schip">React</span></div>
+          
+          <div class="wlinks" style="color:var(--amber);"><a href="https://github.com/karthikeyakoyya/api-health-monitor" target="_blank" rel="noopener">Source ↗</a></div>
         </div>
       </div>
-
-      <div class="wcard">
-        <div class="whead" style="background:var(--mint);"></div>
+      <div class="wcard" data-tags="backend analyst">
+        <div class="whead" style="background:var(--coral);"></div>
         <div class="wbody">
           <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(52,211,153,.15);">🔌</div><div class="wname">Grid Guardian</div></div>
-            <span class="wpill" style="background:rgba(52,211,153,.15);color:var(--mint);">Built</span>
+            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(224,149,74,.15);">🔎</div><div class="wname">FlowLens</div></div>
+            <span class="wpill" style="background:rgba(224,149,74,.15);color:var(--coral);">Full-stack</span>
           </div>
-          <p class="wdesc">A smart-utility customer intelligence platform: a Django REST + Celery + Redis backend ingests a live simulated feed from 8 meters, flags anomalies with rolling z-score statistics, and scores customer risk with a transparent weighted rule, no external ML framework, everything inspectable in plain Python. An animated dashboard polls the API every 4 seconds; ships with a one-command Docker Compose setup.</p>
-          <div class="wstack"><span class="schip">Django REST</span><span class="schip">Celery</span><span class="schip">Redis</span><span class="schip">PostgreSQL</span><span class="schip">Docker</span></div>
-          <div class="wlinks" style="color:var(--mint);"><a href="https://github.com/karthikeyakoyya/grid-guardian" target="_blank" rel="noopener">Source ↗</a></div>
+          <img class="wshot" src="img/flowlens.jpg" alt="FlowLens analytics page on demo data: run counts, failure and rework rates, and a bottleneck summary with time spent per stage." width="1000" height="625" loading="lazy">
+          <p class="wdesc">Most trackers tell you whether a task is done. FlowLens shows how work actually moves: define stages and validation rules, run records through them, and see every blocked transition, every rework loop and the real bottleneck, calculated from stored history. One command (docker compose up) starts it with demo data.</p>
+          <div class="wstack"><span class="schip">FastAPI</span><span class="schip">PostgreSQL</span><span class="schip">React + TypeScript</span><span class="schip">Docker</span><span class="schip">JWT</span></div>
+          <div class="wmetrics"><div class="m"><b>27</b><span>BACKEND TESTS</span></div><div class="m"><b>27</b><span>FRONTEND TESTS</span></div></div>
+          <div class="wlinks" style="color:var(--coral);"><a href="https://github.com/karthikeyakoyya/flowlens" target="_blank" rel="noopener">Source ↗</a></div>
         </div>
       </div>
-
-      <div class="wcard">
+      <div class="wcard feature" data-tags="data ml analyst">
         <div class="whead" style="background:var(--sky);"></div>
         <div class="wbody">
           <div class="wtop">
-            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(56,189,248,.15);">🔍</div><div class="wname">AgentOps: PR Copilot</div></div>
-            <span class="wpill" style="background:rgba(56,189,248,.15);color:var(--sky);">Prototype</span>
+            <div style="display:flex;gap:14px;align-items:center;"><div class="wicon" style="background:rgba(56,189,248,.15);">📈</div><div class="wname">Retail Insights Copilot</div></div>
+            <span class="wpill" style="background:rgba(56,189,248,.15);color:var(--sky);">Data &amp; GenAI</span>
           </div>
-          <p class="wdesc">A governed LangGraph agent SDK with a reference agent that reviews a pull request end to end: retrieves relevant code (RAG), runs the real test suite, proposes a fix, checks it against a safety guardrail, and pauses for human approval before touching the repo, with RBAC and an audit log underneath. All 14 unit tests (governance/routing/guardrail logic) pass, and the human-in-the-loop pause/resume lifecycle was verified end to end with a stub model standing in for a live LLM call.</p>
-          <div class="wstack"><span class="schip">LangGraph</span><span class="schip">FastAPI</span><span class="schip">RBAC / Governance</span><span class="schip">pytest</span></div>
-          <div class="wlinks" style="color:var(--sky);"><a href="https://github.com/karthikeyakoyya/agentops-pr-copilot" target="_blank" rel="noopener">Source ↗</a></div>
+          <img class="wshot" src="img/retail.jpg" alt="The Retail Insights Copilot dashboard: 5,000 orders, revenue, customers and on-time delivery rate, shown on sample data." width="1000" height="625" loading="lazy">
+          <p class="wdesc">A small analytics platform on synthetic e-commerce data: a dbt warehouse (4 dimension and 3 fact tables), three Tableau-ready dashboard extracts, and a natural-language-to-SQL engine that answers business questions with real queries. The dashboard page replays sample answers; the real engine is the Python service in the repo.</p>
+          <div class="wstack"><span class="schip">dbt</span><span class="schip">SQL</span><span class="schip">Python</span><span class="schip">NL to SQL</span><span class="schip">Tableau extracts</span></div>
+          <div class="wmetrics"><div class="m"><b>41/41</b><span>DBT TESTS PASSING</span></div><div class="m"><b>3</b><span>DASHBOARDS</span></div></div>
+          <div class="wlinks" style="color:var(--sky);"><a href="https://github.com/karthikeyakoyya/retail-insights-copilot" target="_blank" rel="noopener">Source ↗</a></div>
         </div>
       </div>
 
+    </div>
+
+    <div class="wmore">More projects</div>
+    <div class="mlist collapsed" id="mlist">
+      <div class="mrow" data-tags="analyst data ml">
+        <div class="mname">PlanPulse<small>Python · DuckDB · SQL · Excel · Word · PowerPoint</small></div>
+        <p class="mdesc">A weekly supply-chain planning review for four markets, built on simulated data. It loads forecast, stock and purchase-order extracts, runs 10 SQL data-quality checks, flags what's off, tracks who has to act and by when, and writes the Excel workbook, Word note, PowerPoint deck and dashboard. 13 tests pass, and a short doc lists the automation ideas I'd try next. The scheduled GitHub run and the live AI summary haven't been exercised yet.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/planpulse" target="_blank" rel="noopener">Source ↗</a></div>
+        <img class="mshot" src="img/planpulse.jpg" alt="PlanPulse weekly dashboard on simulated data: forecast error, days of cover, late purchase orders, and an 8-week stockout runway table." width="1000" height="625" loading="lazy">
+      </div>
+      <div class="mrow" data-tags="backend">
+        <div class="mname">Pulseboard<small>Python · Flask · RBAC</small></div>
+        <p class="mdesc">A watchdog that restarts, scales or rolls back an unhealthy service, but only through an RBAC check the poller can't bypass. Kubernetes and Terraform files are included but haven't been run on live infrastructure yet.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/pulseboard" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+      <div class="mrow" data-tags="backend">
+        <div class="mname">Docket<small>C# · ASP.NET Core · GraphQL · Angular</small></div>
+        <p class="mdesc">Request and approval tracking for internal ops, with an enforced approval lifecycle and role-based access on both a REST API and a GraphQL endpoint. Checked with a 40-check verification harness; the CI pipeline is written but not run yet.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/docket" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+      <div class="mrow" data-tags="data systems analyst">
+        <div class="mname">Mainframe Claims Batch<small>COBOL · JCL · DB2 · VSAM</small></div>
+        <p class="mdesc">A nightly insurance-claims batch cycle, built because I wanted to learn mainframe work first-hand instead of listing it on a resume. The COBOL ran for real on GnuCOBOL, and a portability bug I hit on a second machine is written up in the README. The JCL is written to standard but hasn't run on z/OS.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/mainframe-claims-batch" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+      <div class="mrow" data-tags="data analyst">
+        <div class="mname">Healthcare Claims ETL Warehouse<small>Python · pandas · SQL</small></div>
+        <p class="mdesc">Synthetic claims data cleaned into a star-schema warehouse: 6,120 raw rows in, 120 dirty rows quarantined, 10 data-quality checks passing, and SQL for denial rates, AR aging and payer speed-to-pay.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/healthcare-claims-etl-warehouse" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+      <div class="mrow" data-tags="ml backend">
+        <div class="mname">ClassCopilot<small>MCP · React</small></div>
+        <p class="mdesc">An MCP server that gives any AI client two teaching tools, adaptive quizzes and rubric-based grading, with a dashboard where a teacher reviews and overrides every AI grade. It ships with an eval harness and a written list of where the grader falls short.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/classcopilot-mcp" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+      <div class="mrow mextra" data-tags="ml">
+        <div class="mname">Aperture<small>Python · FastAPI · YOLOv8</small></div>
+        <p class="mdesc">Matches people across two cameras to build one footfall map. On its synthetic two-camera benchmark it scores 0.989 F1, and the README shows the weaker first version (0.776) and what fixed it.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/aperture-reid" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+      <div class="mrow mextra" data-tags="data backend analyst">
+        <div class="mname">RouteRift<small>FastAPI · OpenStreetMap · OSRM</small></div>
+        <p class="mdesc">Vizag gets cyclones and monsoon flooding most years, and maps are slow to catch up. RouteRift compares OpenStreetMap against a routing engine and flags where they disagree: undocumented closures, one-way mismatches, ETA drift.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/routerift" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+      <div class="mrow mextra" data-tags="ml systems">
+        <div class="mname">OptiPick<small>Python · decision tree</small></div>
+        <p class="mdesc">A tiny compiler that learns which order to run its own optimization passes in. On held-out synthetic programs it picks the cheaper order about 90% of the time, saving around 2.4% of work on average. Includes a browser visualizer and 17 tests.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/optipick" target="_blank" rel="noopener">Source ↗</a></div>
+        <img class="mshot" src="img/optipick.jpg" alt="The OptiPick visualizer showing four compiler passes and the source code being optimized." width="1000" height="625" loading="lazy">
+      </div>
+      <div class="mrow mextra" data-tags="ml analyst">
+        <div class="mname">Warehouse Inventory Auditor<small>YOLOv8 · ByteTrack · Flask · MongoDB</small></div>
+        <p class="mdesc">Scans warehouse video feeds with object detection and tracking to follow items and flag stock discrepancies, with a Flask API, MongoDB and a React frontend.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/ai-warehouse-auditor" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+      <div class="mrow mextra" data-tags="backend data analyst">
+        <div class="mname">Employee Attendance &amp; Analytics API<small>FastAPI · MongoDB</small></div>
+        <p class="mdesc">Attendance analytics where the 7-day moving average is computed from exact daily rates and rounded once at the end, and an explain endpoint shows every query using an index scan.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/hrone_attendance_api" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+      <div class="mrow mextra" data-tags="ml qa">
+        <div class="mname">AgentOps: PR Copilot<small>LangGraph · FastAPI</small></div>
+        <p class="mdesc">A governed agent that reviews a pull request: it retrieves code, runs the real tests, proposes a fix, checks it against a safety guardrail, and waits for human approval before touching the repo. 14 unit tests pass; the approval pause and resume was verified with a stub model instead of a live LLM.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/agentops-pr-copilot" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+      <div class="mrow mextra" data-tags="qa backend">
+        <div class="mname">TestOps AI<small>Django REST · Next.js · PostgreSQL</small></div>
+        <p class="mdesc">A test-orchestration platform with an AI ticket classifier, a natural-language query layer and JWT auth. 23 backend and 19 frontend tests, with CI green on GitHub Actions.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/testops-ai" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+      <div class="mrow mextra" data-tags="systems">
+        <div class="mname">AEGIS-Core<small>C++17 · Qt5 · POSIX IPC</small></div>
+        <p class="mdesc">A mission-control style desktop console for multi-channel telemetry: one C++ thread per simulated channel, custom Qt painting, a built-in-test status per channel, and a real POSIX message-queue exchange between two processes.</p>
+        <div class="mlinks"><a href="https://github.com/karthikeyakoyya/aegis-core" target="_blank" rel="noopener">Source ↗</a></div>
+      </div>
+    </div>
+    <button class="btn btn-line mtoggle" id="mtoggle" aria-expanded="false">Show all 14 projects ↓</button>
+    <p class="work-end"><a class="btn btn-line" href="https://github.com/karthikeyakoyya?tab=repositories" target="_blank" rel="noopener">All repositories on GitHub ↗</a></p>
+  </div>
+</section>
+
+<section id="practice">
+  <div class="wrap">
+    <div class="eyebrow">How I work</div>
+    <h2 class="stitle">Beyond the code</h2>
+    <div class="pgrid">
+      <div class="pcard">
+        <h3>I write things down</h3>
+        <p>Every project has a README that says what I tested and what I didn't. My KYC/AML pipeline writes its own Word report for flagged cases, and my securitization toolkit exports Excel schedules and a Word work paper built from its own results.</p>
+      </div>
+      <div class="pcard">
+        <h3>I work with people</h3>
+        <p>As Editor-in-Chief of Radio NITRoz I led a team of 20+ and co-led sponsorship outreach to 140+ local businesses. My final-year project was a three-person build with a faculty advisor, so I'm comfortable sharing a plan and asking for feedback.</p>
+      </div>
+      <div class="pcard">
+        <h3>I look for where work gets stuck</h3>
+        <p>FlowLens exists because I wanted to see where a process really slows down. It tracks blocked steps and rework loops and works out the bottleneck from stored history. In my helpdesk project I built SLA rules that flag breaches as they happen.</p>
+      </div>
+      <div class="pcard">
+        <h3>I use automation with a human in charge</h3>
+        <p>I've built agents that stop and wait for approval: a pull-request reviewer that asks before touching the repo, a watchdog whose suggested fixes an operator accepts or rejects, and a natural-language-to-SQL layer over a tested dbt warehouse.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="casestudy">
+  <div class="wrap">
+    <div class="eyebrow">A bug worth telling</div>
+    <h2 class="stitle">It passed on my machine. Then it didn't.</h2>
+    <div class="pcard" style="max-width:820px;">
+      <p>I built a small COBOL batch system for insurance claims and tested it end to end on GnuCOBOL 3.1. Every business rule matched real program output, and a SQL query over the results matched the program's own totals.</p>
+      <p style="margin-top:14px;">Then I ran it on a second machine with GnuCOBOL 3.2, and the reject file and the database load file started failing with status 71. The newer version is stricter about leftover bytes in a line-sequential record, and my code had quietly relied on the buffer already being blank.</p>
+      <p style="margin-top:14px;">The fix was to clear each output record before building it, instead of trusting what happened to be in memory. What I took from it: a passing test on one machine only tells you about that machine.</p>
+      <p style="margin-top:14px;"><a class="mlinks-a" href="https://github.com/karthikeyakoyya/mainframe-claims-batch" target="_blank" rel="noopener" style="color:var(--sky);font-family:var(--f-accent);font-weight:600;font-size:14px;">Read the full write-up, including a deliberate duplicate-record test ↗</a></p>
     </div>
   </div>
 </section>
@@ -605,6 +647,7 @@
         <span class="skc" style="background:rgba(224,149,74,.14);color:var(--coral);">TypeScript</span>
         <span class="skc" style="background:rgba(224,149,74,.14);color:var(--coral);">SQL</span>
         <span class="skc" style="background:rgba(224,149,74,.14);color:var(--coral);">C / C++</span>
+        <span class="skc" style="background:rgba(224,149,74,.14);color:var(--coral);">C#</span>
       </div></div>
       <div class="sk-row"><div class="sk-label" style="color:var(--mint);">Testing &amp; QA</div><div class="sk-chips">
         <span class="skc" style="background:rgba(52,211,153,.14);color:var(--mint);">Selenium</span>
@@ -642,10 +685,19 @@
       </div></div>
       <div class="sk-row"><div class="sk-label" style="color:var(--text);">Data &amp; Ops</div><div class="sk-chips">
         <span class="skc" style="background:rgba(245,241,255,.08);color:var(--text);">Power BI</span>
+        <span class="skc" style="background:rgba(245,241,255,.08);color:var(--text);">dbt</span>
         <span class="skc" style="background:rgba(245,241,255,.08);color:var(--text);">Airtable</span>
         <span class="skc" style="background:rgba(245,241,255,.08);color:var(--text);">Claude API</span>
         <span class="skc" style="background:rgba(245,241,255,.08);color:var(--text);">Data Governance / DQ</span>
         <span class="skc" style="background:rgba(245,241,255,.08);color:var(--text);">GitHub Actions CI</span>
+      </div></div>
+      <div class="sk-row"><div class="sk-label" style="color:var(--sky);">Business &amp; Communication</div><div class="sk-chips">
+        <span class="skc" style="background:rgba(56,189,248,.14);color:var(--sky);">MS Excel</span>
+        <span class="skc" style="background:rgba(56,189,248,.14);color:var(--sky);">PowerPoint</span>
+        <span class="skc" style="background:rgba(56,189,248,.14);color:var(--sky);">MS Word</span>
+        <span class="skc" style="background:rgba(56,189,248,.14);color:var(--sky);">Technical documentation</span>
+        <span class="skc" style="background:rgba(56,189,248,.14);color:var(--sky);">Process analysis</span>
+        <span class="skc" style="background:rgba(56,189,248,.14);color:var(--sky);">Team coordination</span>
       </div></div>
       <div class="sk-row"><div class="sk-label" style="color:var(--amber);">Agentic AI</div><div class="sk-chips">
         <span class="skc" style="background:rgba(240,180,41,.14);color:var(--amber);">LangGraph</span>
@@ -653,22 +705,6 @@
         <span class="skc" style="background:rgba(240,180,41,.14);color:var(--amber);">Claude API</span>
         <span class="skc" style="background:rgba(240,180,41,.14);color:var(--amber);">RBAC / Governance</span>
       </div></div>
-    </div>
-
-    <div class="skills-viz">
-      <div class="radar-box">
-        <h3>Range across domains</h3>
-        <svg id="radar" viewBox="0 0 320 320"></svg>
-      </div>
-      <div>
-        <div class="prof-row" data-w="90"><div class="prof-top"><span>Python, ML &amp; AutoML tooling</span><span class="pct">Strong</span></div><div class="prof-track"><div class="prof-fill" style="background:linear-gradient(90deg,var(--coral),var(--amber));"></div></div></div>
-        <div class="prof-row" data-w="82"><div class="prof-top"><span>Backend APIs (FastAPI / Django)</span><span class="pct">Strong</span></div><div class="prof-track"><div class="prof-fill" style="background:linear-gradient(90deg,var(--amber),var(--mint));"></div></div></div>
-        <div class="prof-row" data-w="80"><div class="prof-top"><span>Test automation (Selenium / API / DB)</span><span class="pct">Strong</span></div><div class="prof-track"><div class="prof-fill" style="background:linear-gradient(90deg,var(--mint),var(--coral));"></div></div></div>
-        <div class="prof-row" data-w="80"><div class="prof-top"><span>React / Next.js / React Native</span><span class="pct">Strong</span></div><div class="prof-track"><div class="prof-fill" style="background:linear-gradient(90deg,var(--mint),var(--sky));"></div></div></div>
-        <div class="prof-row" data-w="72"><div class="prof-top"><span>Embedded &amp; IoT (ESP32/BLE)</span><span class="pct">Solid</span></div><div class="prof-track"><div class="prof-fill" style="background:linear-gradient(90deg,var(--sky),var(--coral));"></div></div></div>
-        <div class="prof-row" data-w="72"><div class="prof-top"><span>Data engineering &amp; governance</span><span class="pct">Solid</span></div><div class="prof-track"><div class="prof-fill" style="background:linear-gradient(90deg,var(--coral),var(--mint));"></div></div></div>
-        <div class="prof-row" data-w="65"><div class="prof-top"><span>Docker / cloud deploys</span><span class="pct">Growing</span></div><div class="prof-track"><div class="prof-fill" style="background:linear-gradient(90deg,var(--amber),var(--sky));"></div></div></div>
-      </div>
     </div>
   </div>
 </section>
@@ -678,17 +714,13 @@
     <div class="eyebrow">Journey</div>
     <h2 class="stitle">How I got here</h2>
     <div class="tl">
-      <div class="tlrow"><div class="time">2022 to 2026</div><b>B.Tech, Computer Science &amp; Engineering</b><p>NIT Durgapur, coursework spanning systems, ML, and embedded computing.</p></div>
+      <div class="tlrow"><div class="time">2022 to 2026</div><b>B.Tech, Computer Science &amp; Engineering</b><p>NIT Durgapur, with coursework across systems, ML and embedded computing.</p></div>
       <div class="tlrow"><div class="time">2023</div><b>NASA ISSDC Honourable Mention</b><p>Competed at the NASA Ames Space Settlement Design Competition.</p></div>
-      <div class="tlrow"><div class="time">2023 to 2025</div><b>Editor-in-Chief, Radio NITRoz</b><p>Led a 20+ person team and co-led sponsorship outreach to 140+ local businesses for NIT Fest.</p></div>
-      <div class="tlrow"><div class="time">Nov 2024</div><b>100% Job Ready DSA Course, Java</b><p>Certified by LearnYard, under Mohammad Fraz and Pulkit Chhabra.</p></div>
-      <div class="tlrow"><div class="time">May to Jun 2025</div><b>Software Engineering Intern, Navodita Infotech</b><p>Remote internship, early hands-on engineering experience.</p></div>
-      <div class="tlrow"><div class="time">2025 to 2026</div><b>Human Activity Recognition, final-year project</b><p>Designed and shipped my anchor project, from custom hardware to a trained on-device classifier.</p></div>
-      <div class="tlrow"><div class="time">May 2026</div><b>Graduated, B.Tech CSE</b><p>Wrapped up at NIT Durgapur and moved into full-time job search mode.</p></div>
-      <div class="tlrow"><div class="time">Jun to Jul 2026</div><b>Project build sprint</b><p>Shipped the Crop Advisory AutoML system, a data catalog &amp; governance dashboard, and an AI-augmented event-ops tool back to back.</p></div>
-      <div class="tlrow"><div class="time">2026</div><b>TestOps AI, Phases 1 to 5</b><p>Built a full-stack test orchestration platform with an AI classifier, NL query orchestration, and a CI pipeline running green.</p></div>
-      <div class="tlrow"><div class="time">Aug to Sep 2026</div><b>QA &amp; automation-engineering sprint</b><p>Shipped a Selenium/TestNG/RestAssured/JDBC QA suite, an ITSM helpdesk with ML auto-triage, a Kafka-based API health monitor, a Django/Celery utility-analytics platform, and a governed LangGraph PR-review agent, while tailoring applications for QA/automation-engineer roles.</p></div>
-      <div class="tlrow"><div class="time">2026 onward</div><b>Active job search</b><p>Shipping projects, applying widely, and staying open to QA automation, SDE, data, and AI/ML roles across India.</p></div>
+      <div class="tlrow"><div class="time">2023 to 2025</div><b>Editor-in-Chief, Radio NITRoz</b><p>Led a team of 20+ and co-led sponsorship outreach to 140+ local businesses for NIT Fest.</p></div>
+      <div class="tlrow"><div class="time">May to Jun 2025</div><b>Software Engineering Intern, Navodita Infotech</b><p>Remote internship and my first hands-on engineering work.</p></div>
+      <div class="tlrow"><div class="time">2025 to 2026</div><b>Human Activity Recognition</b><p>My final-year project, from custom hardware to a trained classifier.</p></div>
+      <div class="tlrow"><div class="time">May 2026</div><b>Graduated</b><p>B.Tech CSE from NIT Durgapur.</p></div>
+      <div class="tlrow"><div class="time">Jun 2026 onward</div><b>Building while I look for my first full-time role</b><p>Test automation, backend, data and ML projects across 30+ repositories, and open to roles across India.</p></div>
     </div>
   </div>
 </section>
@@ -705,17 +737,12 @@
         <a class="cxchip li" href="https://linkedin.com/in/karthikeya-koyya" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
 
-      <form class="cform" id="contactForm">
-        <input type="text" id="cf-name" placeholder="Your name" required>
-        <input type="email" id="cf-email" placeholder="Your email" required>
-        <textarea id="cf-msg" rows="4" placeholder="What are you looking to build / hire for?" required></textarea>
-        <button type="submit" class="btn btn-fill">Send message →</button>
-        <div class="cform-note">Opens your email app, addressed to koyyakarthikeya4@gmail.com. Nothing is stored here.</div>
-      </form>
+      <div class="cta-main"><a class="btn btn-fill" href="mailto:koyyakarthikeya4@gmail.com?subject=Hello%20Karthikeya">Email me →</a><a class="btn btn-line" href="resume.pdf" id="resumeBtn2" download="Karthikeya_Koyya_Resume.pdf" hidden>Download resume ↓</a></div>
     </div>
   </div>
 </section>
 
+</main>
 <footer>Karthikeya Koyya · Visakhapatnam, India · 2026</footer>
 
 <script>
@@ -909,17 +936,41 @@ if(!reduceMotion && window.matchMedia('(pointer:fine)').matches){
   });
 }
 
-// Contact form -> mailto
-const cform = document.getElementById('contactForm');
-cform.addEventListener('submit', (e)=>{
-  e.preventDefault();
-  const name = document.getElementById('cf-name').value;
-  const email = document.getElementById('cf-email').value;
-  const msg = document.getElementById('cf-msg').value;
-  const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-  const body = encodeURIComponent(`${msg}\n\nFrom ${name} (${email})`);
-  window.location.href = `mailto:koyyakarthikeya4@gmail.com?subject=${subject}&body=${body}`;
-});
+// Project filter chips
+(function(){
+  const chips = document.querySelectorAll('.fchip');
+  const items = document.querySelectorAll('#work [data-tags]');
+  chips.forEach(chip=>chip.addEventListener('click', ()=>{
+    const f = chip.dataset.filter;
+    chips.forEach(c=>c.setAttribute('aria-pressed', c===chip ? 'true' : 'false'));
+    items.forEach(el=>{
+      const show = f === 'all' || el.dataset.tags.split(' ').includes(f);
+      el.hidden = !show;
+    });
+    const list = document.getElementById('mlist'), tg = document.getElementById('mtoggle');
+    if (list && tg) { if (f === 'all') { tg.hidden = false; list.classList.toggle('collapsed', tg.getAttribute('aria-expanded') !== 'true'); } else { tg.hidden = true; list.classList.remove('collapsed'); } }
+  }));
+})();
+
+// Show/hide the long project list
+(function(){
+  const tg = document.getElementById('mtoggle'), list = document.getElementById('mlist');
+  if (!tg || !list) return;
+  const total = list.querySelectorAll('.mrow').length;
+  tg.addEventListener('click', ()=>{
+    const open = tg.getAttribute('aria-expanded') !== 'true';
+    tg.setAttribute('aria-expanded', open ? 'true' : 'false');
+    list.classList.toggle('collapsed', !open);
+    tg.textContent = open ? 'Show fewer ↑' : 'Show all ' + total + ' projects ↓';
+  });
+})();
+
+// Show the resume buttons only if resume.pdf is actually deployed
+(function(){
+  fetch('resume.pdf', {method:'HEAD'}).then(r=>{
+    if (r.ok) ['resumeBtn','resumeBtn2'].forEach(id=>{ const el=document.getElementById(id); if (el) el.hidden=false; });
+  }).catch(()=>{});
+})();
 </script>
 </body>
 </html>
